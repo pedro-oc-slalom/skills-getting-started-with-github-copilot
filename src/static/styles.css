@@ -159,10 +159,53 @@ footer {
 }
 
 .participants-list {
-  list-style-type: disc;
-  margin-left: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   color: #3949ab;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 10px;
+  border: 1px solid #dfe3f5;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.participant-email {
+  flex: 1;
+  word-break: break-all;
+}
+
+.remove-participant {
+  border: none;
+  background: none;
+  color: #c62828;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.remove-participant:hover,
+.remove-participant:focus-visible {
+  background-color: #fdecea;
+  color: #b71c1c;
+}
+
+.remove-participant:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .participants-section.no-participants {
